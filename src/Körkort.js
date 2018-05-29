@@ -16,7 +16,7 @@ function canGetLicense(licence, age) {
 
 }
 
-canGetLicense("B",21)
+
 
 export {
   canGetLicense
