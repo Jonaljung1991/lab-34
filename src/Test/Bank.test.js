@@ -13,10 +13,8 @@ let actualBalance = kalle.balance;
 describe("Bank functions testing", () => {
     test("Trying deposit", () => {
         actualBalance = kalle.balance;
-        const depositVal = 5;
+        const depositVal = 5; ;
 
-        expect(tryAmount(depositVal)).toBe(true);
-        expect(tryObject(kalle)).toBe(true);
         deposit(kalle, depositVal);
         expect(kalle.balance).toBe(actualBalance + depositVal);
     })
@@ -24,17 +22,14 @@ describe("Bank functions testing", () => {
         actualBalance = kalle.balance;
         const withdrawVal = "5";
 
-        expect(tryAmount(withdrawVal)).toBe(true);
-        expect(tryObject(kalle)).toBe(true);
         withdraw(kalle, withdrawVal);
         expect(kalle.balance).toBe(actualBalance - withdrawVal);
 
     })
     test("Trying transfer" , () =>{
-      const transferVal = "150";
       actualBalance = kalle.balance;
-      expect(tryAmount(transferVal)).toBe(true);
-      expect(tryObject(kalle)).toBe(true);
+      const transferVal = "150";
+
       transfer(kalle,greta,transferVal);
       expect(kalle.balance).toBe(actualBalance - transferVal)
     })
