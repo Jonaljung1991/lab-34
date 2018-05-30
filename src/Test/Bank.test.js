@@ -1,4 +1,4 @@
-import {deposit, tryAmount, withdraw, transfer} from "../Bank";
+import {deposit, tryAmount, withdraw, transfer, tryObject} from "../Bank";
 
 let kalle = {
     name: 'Kalle',
@@ -16,6 +16,7 @@ describe("Bank functions testing", () => {
         const depositVal = 5;
 
         expect(tryAmount(depositVal)).toBe(true);
+        expect(tryObject(kalle)).toBe(true);
         deposit(kalle, depositVal);
         expect(kalle.balance).toBe(actualBalance + depositVal);
     })
@@ -24,6 +25,7 @@ describe("Bank functions testing", () => {
         const withdrawVal = "5";
 
         expect(tryAmount(withdrawVal)).toBe(true);
+        expect(tryObject(kalle)).toBe(true);
         withdraw(kalle, withdrawVal);
         expect(kalle.balance).toBe(actualBalance - withdrawVal);
 
@@ -32,6 +34,7 @@ describe("Bank functions testing", () => {
       const transferVal = "150";
       actualBalance = kalle.balance;
       expect(tryAmount(transferVal)).toBe(true);
+      expect(tryObject(kalle)).toBe(true);
       transfer(kalle,greta,transferVal);
       expect(kalle.balance).toBe(actualBalance - transferVal)
     })
