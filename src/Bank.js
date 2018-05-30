@@ -27,10 +27,14 @@ function tryObject(obj) {
 }
 
 function deposit(account, amount) {
+
   if (tryAmount(amount)) {
+    amount = Number(amount);
     if (tryObject(account)) {
+
       let newValue = account.balance + amount;
       account.balance = newValue;
+
     } else {
       throw new Error("The Account amount parameter didn't match the accepted datatype value");
     }
@@ -41,10 +45,13 @@ function deposit(account, amount) {
 
 function withdraw(account, amount) {
   if (tryAmount(amount)) {
+    amount = Number(amount);
     if (tryObject(account)) {
       if (amount <= account.balance) {
+
         let newValue = account.balance - amount;
         account.balance = newValue;
+
       } else {
         throw new Error("The amount is out of limit");
       }
@@ -58,12 +65,15 @@ function withdraw(account, amount) {
 
 function transfer(accountSender, accountReceiver, amount) {
   if (tryAmount(amount)) {
+    amount = Number(amount);
     if (tryObject(accountSender) && tryObject(accountReceiver)) {
       if (amount <= accountSender.balance) {
+
         let newValue = accountSender.balance - amount;
         accountSender.balance = newValue;
         newValue = accountReceiver.balance + amount;
         accountReceiver.balance = newValue
+
       } else {
         throw new Error("The amount is out of limit");
       }

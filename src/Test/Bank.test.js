@@ -13,7 +13,7 @@ let actualBalance = kalle.balance;
 describe("Bank functions testing", () => {
     test("Trying deposit", () => {
         actualBalance = kalle.balance;
-        const depositVal = 5; ;
+        const depositVal = 5;
 
         deposit(kalle, depositVal);
         expect(kalle.balance).toBe(actualBalance + depositVal);
