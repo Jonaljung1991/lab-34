@@ -81,4 +81,5 @@ export {
   withdraw,
   transfer,
   tryObject
+
 };
