@@ -8,6 +8,10 @@ describe("Temp-to-fahrenheit", () =>{
 
   });
 
+  test("Trying string number" , () =>{
+    expect(toFahrenheit("5")).toBe(parseInt("5")* 9/5 + 32)
+  })
+
   test("Trying ( - limit1 )" , () =>{
     expect(toFahrenheit(-273.16)).toBeNaN();
   });
