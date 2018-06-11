@@ -1,0 +1,34 @@
+Robin och Jonathan
+
+testfall: 
+
+Temp:
+
+testar först ifall man kan skicka in ett tomt objekt (detta ska inte funka).
+testar gränsväderna, samt tal,decimaler,stort positivt nummber, stort negativt nummer. Testar alla datatyper. allt detta ska inte funka,
+det borde inte gå igenom.
+
+De gjorde så att allt blir grönt även fast värderna man skickar in "inte är korrekta" de går alltså igenom exakt allt som man kan tänka sig
+skicka in. 
+
+Körtkort:
+
+De testar först att värderna matchar med parametrarnas datatyper för sedan matcha varje enskild parameter med värderna vi fick in labben.
+Skulle något av de inte matacha så kastar de ett error med throw.
+
+De gjorde så att allt blir grönt även fast värderna man skickar in "inte är korrekta" de går alltså igenom exakt allt som man kan tänka sig
+skicka in. 
+
+
+Bank:
+Den är skriven så den kollar exakt allt som inte matchar med värderna man skickar in. 
+Kollar objekt med balance kastar errors om det inte är ett objekt, om det är ett objekt så måste egenskaperna stämma med labben.
+Testar att man skickar med alla datatyper. Account kan omvandla str till nummer om man skulle skicka in ett str ist för tal samt för NaN. 
+Allt måste stämma överens med korrekt datatyp för att föra över pengar. Kollar nummer och namn. 
+
+
+
+Viktigaste att tänka när man testar:
+
+Första kolla alla gränsväderna efter detta alla datatyperna(som kall gå användas).
+Sen så får man sätta upp min-max gränser beroende på vad man vill testar. Vi tyckte likadant när de gäller detta.
