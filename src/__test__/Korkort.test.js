@@ -44,11 +44,11 @@ test("Licence", () => {
 })
 
 test("Licence", () => {
-    expect(canGetLicense("D", 20)).toBe(true)
+    expect(() => canGetLicense("D", 20)).toThrow()
     
 })
 
 test("Licence", () => {
-    expect(canGetLicense("A", 19)).toBe(true)
+    expect(() => canGetLicense("A", 19)).toThrow()
     
 })

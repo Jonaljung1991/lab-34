@@ -1,7 +1,25 @@
 function canGetLicense(licence, age) {
   
    const licenceTypes = ["A", "B", "BE", "C", "D","a","b","be","c","d"];
-   const ageReq = [24, 18, 21, 24]; 
+   const req = [
+       {
+        type: "a",
+        age: 24
+    },{
+        type: "b",
+        age: 18
+    },{
+        type: "be",
+        age: 18
+    },{
+       type: "c",
+        age: 21
+    },{
+        type: "d",
+        age: 24
+    }
+       
+    ]
    
     let trueValues = 0;
     
@@ -10,16 +28,27 @@ function canGetLicense(licence, age) {
       trueValues++
         } else {
       throw new Error("please enter a valid licenceType")
-    }
+    } 
     
 
     if(typeof(age) === "number") {
      
     if(age <= 0 && age >= 120) {
      throw new Error("not old enough")
+        
     
     }else{
-        trueValues++
+        for(let i = 0; i < req.length; i++){
+        
+            if(req[i].type === licence  || (req[i].type.toUpperCase()) === licence ){
+                console.log(req[i].type.toUpperCase())
+                if(age >= req[i].age){
+                     trueValues++
+                }
+            }        
+        }
+       
+        
     } 
     
    } else {
@@ -27,6 +56,8 @@ function canGetLicense(licence, age) {
    } 
     if(trueValues === 2) {
         return true
+    }else{
+        throw new Error ("no licence")
     }
 
 
