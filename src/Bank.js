@@ -44,14 +44,13 @@ function deposit(account, amount) {
 }
 
 function withdraw(account, amount) {
+
   if (tryAmount(amount)) {
     amount = Number(amount);
     if (tryObject(account)) {
       if (amount <= account.balance) {
-
         let newValue = account.balance - amount;
         account.balance = newValue;
-
       } else {
         throw new Error("The amount is out of limit");
       }
