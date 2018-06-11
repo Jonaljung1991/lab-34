@@ -1,4 +1,4 @@
-import { canGetLicense } from "../Körkort.js";
+﻿import { canGetLicense } from "../Korkort.js";
 
 describe("LicenceName", () =>{
   test("Checking", () =>{

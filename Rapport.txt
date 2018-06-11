@@ -1,1 +1,19 @@
+Temp:
 
+testar f�rst ifall man kan skicka in ett tomtobjekt (detta ska inte funka).
+testar gr�nsv�derna, samt tal,decimaler,stort positift nummber, stort negativt nummer. Testar alla datatyper. allt detta ska inte funka,
+det borde inte g� igenom.
+
+De gjorde s� att allt blir gr�nt �ven fast v�rderna man skickar in "inte �r korrekta" de g�r allts� igenom exakt allt som man kan t�nka sig
+skicka in.
+
+K�rtkort:
+
+
+
+Bank:
+Den �r omskriva s� den kollar exakt allt som inte matchar med v�rderna man skickar in.
+Kollar objekt med balance kastar errors om det inte �r ett objekt, om det �r ett objekt s� m�ste egenskaperna st�mma,
+str och en str som blir nummer.
+Testar de man skickar med alla datatyper. Account kan omvandla str till nummer om skulle skicka in ett str ist f�r tal samt f�r NaN.
+Allt som st�mma �verens med korrekt datatyp f�r att f�ra �ver pengar. Kollar nummer och namn.
